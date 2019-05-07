@@ -18,3 +18,9 @@ Because HOPEs are maintained as text files in a versioned repository, their revi
 
 HOPEs are modeled directly after [Python PEPs](https://www.python.org/dev/peps/), the language that powers Hug.
 
+
+## HOPE Audience
+
+The typical primary audience for HOPEs are the core developers of the Hug framework and related plugins and libraries, as well as dedicated Hug users.
+
+However, the process is public and review and feedback is welcome from any interested parties across the Hug and Python communities.
