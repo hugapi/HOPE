@@ -1,12 +1,13 @@
 # HOPE 1 -- HOPE Purpose and Guidelines
 
-|             |                             |
-| ------------| --------------------------- |
-| HOPE:       | 1                           |
-| Title:      | HOPE Purpose and Guidelines |
-| Author(s):  | Timothy Crosley             |
-| Status:     | Draft                       |
-| Type:       | Process                     |
+|             |                                             |
+| ------------| ------------------------------------------- |
+| HOPE:       | 1                                           |
+| Title:      | HOPE Purpose and Guidelines                 |
+| Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
+| Status:     | Draft                                       |
+| Type:       | Process                                     |
+| Created:    | 13-May-2019                                 |
 
 ## What is a HOPE?
 
@@ -53,7 +54,6 @@ Vetting an idea publicly before going as far as writing a HOPE is meant to save 
 
 Once the champion has asked the Hug community as to whether an idea has any chance of acceptance, a draft HOPE should be presented to this repository as a pull request with a [DRAFT] tag. This gives the author a chance to flesh out the draft HOPE to make properly formatted, of high quality, and to address initial concerns about the proposal.
 
-
 ## Submitting a HOPE
 
 Following a community discussion, the standard HOPE workflow is:
@@ -77,6 +77,8 @@ Following a community discussion, the standard HOPE workflow is:
 - As updates are necessary, the HOPE author can check in new versions to their branch
 - HOPEs will be left as open Pull Requests until either 2 core-devs have approved the HOPE, without any no votes, or a majority of core-devs have approved it.
 - If a HOPE is accepted it will be merged in and placed in the `accepted` directory, otherwise, it will be merged in and placed in the rejected directory.
+
+**IMPORTANT NOTE:** Until sufficient structure is in place, I Timothy Crosley, as the Benevolent Dictator For Now (BDFN), can accept and put in place any HOPEs unanimously. I am doing this only to bootstrap the process.
 
 ## HOPE format
 - All HOPEs should be UTF-8 encoded markdown files. These files should be titled HOPE-{hope_number}--{hope_title}.md, with 9999 acting as a placeholder number for new HOPEs.

@@ -1,0 +1,1 @@
+../all/HOPE-1--HOPE-Purpose-and-Guidelines.md
