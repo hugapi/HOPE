@@ -1,0 +1,24 @@
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+htmlcov
+.cache
+.pytest_cache
+
+# IDE Files
+atlassian-ide-plugin.xml
+.idea/
+*.swp
+*.kate-swp
+.ropeproject/
+
+# Python3 Venv Files
+.venv/
+bin/
+include/
+lib/
+lib64
+pyvenv.cfg
+share/
+venv/
