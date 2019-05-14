@@ -5,7 +5,7 @@
 | HOPE:       | 1                                           |
 | Title:      | HOPE Purpose and Guidelines                 |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Draft                                       |
+| Status:     | Active                                      |
 | Type:       | Process                                     |
 | Created:    | 13-May-2019                                 |
 

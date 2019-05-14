@@ -5,7 +5,7 @@
 | HOPE:       | 0                                                       |
 | Title:      | Index of Hug Official Proposals for Enhancement (HOPEs) |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com>             |
-| Status:     | Draft                                                   |
+| Status:     | Active                                                  |
 | Type:       | Informational                                           |
 | Created:    | 13-May-2019                                             |
 
