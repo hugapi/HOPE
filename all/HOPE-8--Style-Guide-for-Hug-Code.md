@@ -22,7 +22,7 @@ All guidelines in this document are in addition to those defined in Python's [PE
 ## Line Length
 
 Too short of lines discourage descriptive variable names where they otherwise make sense.
-Too long of lines reduce overall readability and make it hard to compare to files side by side.
+Too long of lines reduce overall readability and make it hard to compare 2 files side by side.
 There is no perfect number: but for Hug, we've decided to cap the lines at 100 characters.
 
 ## Descriptive Variable names
