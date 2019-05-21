@@ -1,0 +1,1 @@
+../all/HOPE-8--Style-Guide-for-Hug-Code.md
