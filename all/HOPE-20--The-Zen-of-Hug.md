@@ -1,57 +1,45 @@
-# HOPE 8 -- Style Guide for Hug Code
+# HOPE 20 -- The Zen of Hug
 
 |             |                                             |
 | ------------| ------------------------------------------- |
-| HOPE:       | 8                                           |
-| Title:      | Style Guide for Hug Code                    |
+| HOPE:       | 20                                          |
+| Title:      | The Zen of Hug                              |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Active                                      |
-| Type:       | Process                                     |
-| Created:    | 19-May-2019                                 |
-| Updated:    | 19-May-2019                                 |
+| Status:     | Proposed                                    |
+| Type:       | Informational                               |
+| Created:    | 20-May-2019                                 |
+| Updated:    | 20-May-2019                                 |
 
 ## Introduction
 
-This document gives coding conventions for the Hug code comprising the Hug core as well as all official interfaces, extensions, and plugins for the framework.
-Optionally, projects that use Hug are encouraged to follow this HOPE and link to it as a reference.
+Inspired by [PEP 20 - The Zen of Python](https://www.python.org/dev/peps/pep-0020/), we've written down some guiding principals for Hug development.
 
-## PEP 8 Foundation
+## The Zen of Hug
 
-All guidelines in this document are in addition to those defined in Python's [PEP 8](https://www.python.org/dev/peps/pep-0008/) and [PEP 257](https://www.python.org/dev/peps/pep-0008/) guidelines.
+```
+Simple Things should be easy, complex things should be possible.
+Complex things done often, should be made simple.
 
-## Line Length
+Magic should be avoided.
+Magic isn't magic as soon as its mechanics are universally understood.
 
-Too short of lines discourage descriptive variable names where they otherwise make sense.
-Too long of lines reduce overall readability and make it hard to compare 2 files side by side.
-There is no perfect number: but for Hug, we've decided to cap the lines at 100 characters.
+Wrong documentation is worse then no documentation.
+Everything should be documented.
 
-## Descriptive Variable names
+All code should be tested.
+All tests should be meaningful.
 
-Naming things is hard. Hug has a few strict guidelines on the usage of variable names, which hopefully will reduce some of the guesswork:
-- No one character variable names.
-    - Except for x, y, and z as coordinates.
-- It's not okay to override built-in functions.
-    - Except for `id`. Guido himself thought that shouldn't have been moved to the system module. It's too commonly used, and alternatives feel very artificial.
-- Avoid Acronyms, Abbreviations, or any other short forms - unless they are almost universally understand.
+Consistency is more important than perfection.
+It's okay to break consistenty for practicality.
 
-## Adding new modules to hug
+Clarity is more important than performance.
+If we do our job right, their shouldn't need to be a choice.
 
-New modules added to the Hug project should all live directly within the `hug/` directory without nesting. If the modules are meant only for internal use within Hug, they should be prefixed with a leading underscore. For example, def _internal_function. Modules should contain a docstring at the top that gives a general explanation of the purpose and then restates the project's use of the MIT license.
-There should be a `tests/test_$MODULE_NAME.py` file created to correspond to every new module that contains test coverage for the module. Ideally, tests should be 1:1 (one test object per code object, one test method per code method) to the extent cleanly possible.
+Interfaces are one honking great idea -- let's do more of those!
+```
 
-## Automated Code Cleaners
+## Easter Egg
 
-All code submitted to Hug should be formatted using Black and isort.
-Black should be run with the line length set to 100, and isort with Black compatible settings in place.
-
-## Automated Code Linting
-
-All code submitted to hug should run through the following tools:
-
-- Black and isort verification.
-- Flake8
-   - flake8-docstrings
-   - flake8-bugbear
-- Bandit
-- pep8-naming
-- vulture
+```
+>> from hug import this
+```
