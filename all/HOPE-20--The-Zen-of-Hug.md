@@ -18,22 +18,22 @@ Inspired by [PEP 20 - The Zen of Python](https://www.python.org/dev/peps/pep-002
 
 ```
 Simple Things should be easy, complex things should be possible.
-Complex things done often, should be made simple.
+Complex things done often should be made simple.
 
 Magic should be avoided.
 Magic isn't magic as soon as its mechanics are universally understood.
 
-Wrong documentation is worse then no documentation.
+Wrong documentation is worse than no documentation.
 Everything should be documented.
 
 All code should be tested.
 All tests should be meaningful.
 
 Consistency is more important than perfection.
-It's okay to break consistenty for practicality.
+It's okay to break consistency for practicality.
 
 Clarity is more important than performance.
-If we do our job right, their shouldn't need to be a choice.
+If we do our job right, there shouldn't need to be a choice.
 
 Interfaces are one honking great idea -- let's do more of those!
 ```
