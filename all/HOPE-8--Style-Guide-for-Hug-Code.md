@@ -8,7 +8,7 @@
 | Status:     | Active                                      |
 | Type:       | Process                                     |
 | Created:    | 19-May-2019                                 |
-| Updated:    | 19-May-2019                                 |
+| Updated:    | 24-May-2019                                 |
 
 ## Introduction
 
@@ -17,7 +17,7 @@ Optionally, projects that use Hug are encouraged to follow this HOPE and link to
 
 ## PEP 8 Foundation
 
-All guidelines in this document are in addition to those defined in Python's [PEP 8](https://www.python.org/dev/peps/pep-0008/) and [PEP 257](https://www.python.org/dev/peps/pep-0008/) guidelines.
+All guidelines in this document are in addition to those defined in Python's [PEP 8](https://www.python.org/dev/peps/pep-0008/) and [PEP 257](https://www.python.org/dev/peps/pep-0257/) guidelines.
 
 ## Line Length
 
