@@ -45,7 +45,8 @@ Any module that is a direct implementation of a HOPE should link back to the HOP
 
 ## Documentation Markup
 
-If any markup is needed to express a documentation concept fully, that markup should be added via the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) standard.
+If any markup is needed to express a documentation concept fully, that markup should be added via the
+[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) standard.
 Markdown can be placed within docstrings and into stand-alone `.md` files within the project.
 
 ## Generating Browsable Documentation
