@@ -22,28 +22,33 @@ From the [Zen of Hug](https://github.com/hugapi/HOPE/blob/master/all/HOPE-20--Th
     Everything should be documented.
 ```
 
-To this aim Hug projects should contain extensive automated low-level documentation as well as maintained high level documentation.
+To this aim, Hug projects should contain extensive automated low-level documentation as well as maintained high-level documentation.
 
-## PEP 257 Doc String Format
+## PEP 257 Docstring conventions
 
-All doc string based should follow Python's [PEP 257](https://www.python.org/dev/peps/pep-0257/) doc string conventions.
+All doc string based should follow Python's [PEP 257](https://www.python.org/dev/peps/pep-0257/) docstring conventions.
 
 ## Minimal Documentation
 
-Any code written that is intended for external use, should be documented with a doc string, at every level:
+Any code intended for external use should be documented with a docstring, at every level:
     - Module
     - Class
     - Function
     - Method
-    - Etc...
+    - Etc
 
-Type annotations should be used heavily where able to define acceptable parameters.
+Type annotations should be used heavily were able to define acceptable parameters.
 These annotations should be enforced using `MyPy`.
-Any documentation that can be made via Type Annotations should be made there and not repeated within doc strings.
-Where possible, high level documentation should be added to module doc strings and where applicable via HOPE documents themeselves.
+Any documentation that can be made via Type Annotations should be made there and not repeated within docstrings.
+Where possible, high-level documentation should be added to module docstrings and where applicable via HOPE documents themselves.
 Any module that is a direct implementation of a HOPE should link back to the HOPE for reference.
 
+## Documentation Markup
 
+If any markup is needed to express a documentation concept fully, that markup should be added via the [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) standard.
+Markdown can be placed within docstrings and into stand-alone `.md` files within the project.
 
+## Generating Browsable Documentation
 
-
+All projects should generate web browsable documentation, exposed via GitPages or similar service.
+This documentation can be auto-generated using [pdoc](https://pdoc3.github.io/pdoc/) or similar.
