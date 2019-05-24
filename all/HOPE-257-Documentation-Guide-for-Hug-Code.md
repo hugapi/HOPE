@@ -31,11 +31,12 @@ All doc string based should follow Python's [PEP 257](https://www.python.org/dev
 ## Minimal Documentation
 
 Any code intended for external use should be documented with a docstring, at every level:
-    - Module
-    - Class
-    - Function
-    - Method
-    - Etc
+
+- Module
+- Class
+- Function
+- Method
+- Etc
 
 Type annotations should be used heavily were able to define acceptable parameters.
 These annotations should be enforced using `MyPy`.
