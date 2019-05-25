@@ -55,3 +55,4 @@ All code submitted to hug should run through the following tools:
 - Bandit
 - pep8-naming
 - vulture
+- safety
