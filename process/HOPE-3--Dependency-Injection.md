@@ -8,7 +8,7 @@
 | Status:     | Proposed                                    |
 | Type:       | Standard Track                              |
 | Created:    | 25-May-2019                                 |
-| Updated:    | 25-May-2019                                 |
+| Updated:    | 27-May-2019                                 |
 
 ## Abstract
 
@@ -22,7 +22,7 @@ This system would be built with the intention of replacing Hug's current `direct
 
 ## Proposed Dependency Injection System
 
-This HOPE proposes a new dependency injection systems with an aim for clarity and reuse.
+This HOPE proposes a new dependency injection system with an aim for clarity and reuse.
 
 ### Defining a dependency
 
