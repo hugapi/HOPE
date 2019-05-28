@@ -5,7 +5,7 @@
 | HOPE:       | 2                                           |
 | Title:      | Interface Separation                        |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Proposed                                    |
+| Status:     | Accepted                                    |
 | Type:       | Standards Track                             |
 | Created:    | 22-May-2019                                 |
 | Updated:    | 22-May-2019                                 |
