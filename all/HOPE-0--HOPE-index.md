@@ -24,6 +24,13 @@ This HOPE contains the index of all Hug Official Proposals for Enhancement, know
 |P |[8](https://github.com/hugapi/HOPE/blob/master/all/HOPE-8--Style-Guide-for-Hug-Code.md)               | Style Guide for Hug Code           | Timothy Crosley                      |
 |I |[20](https://github.com/hugapi/HOPE/blob/master/all/HOPE-20--The-Zen-of-Hug.md)                       | The Zen of Hug                     | Timothy Crosley                      |
 
+### Standards Track HOPEs (Primarily HOPEs meant to propose changes to the framework)
+
+|  | HOPE                                                                                                 | HOPE Title                         |  HOPE Author(s)                      |
+| -| -----------------------------------------------------------------------------------------------------| -----------------------------------| ------------------------------------ |
+|S |[2](https://github.com/hugapi/HOPE/blob/master/all/HOPE-2--Interface-Separation.md)                   | Interface Separation               | Timothy Crosley                      |
+
+
 ## HOPE Types Key
 
 - *I* - Informational HOPE
