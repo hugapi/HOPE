@@ -15,10 +15,10 @@
 This HOPE proposes adding a robust and universally available dependency injection system to Hug.
 This system would be built with the intention of replacing Hug's current `directive` system, one of the first Python microservice dependency injection systems, solving the shortcomings identified upon extensive usage:
 
-    - Directives aren't clearly separated from type annotations.
-    - It is impossible to have both a directive and type hint for a single parameter.
-    - It isn't easy to swap out directives for full HTTP stack testing (through direct calls make it easy to substitute out).
-    - Directives aren't nestable.
+- Directives aren't clearly separated from type annotations.
+- It is impossible to have both a directive and type hint for a single parameter.
+- It isn't easy to swap out directives for full HTTP stack testing (through direct calls make it easy to substitute out).
+- Directives aren't nestable.
 
 ## Proposed Dependency Injection System
 
