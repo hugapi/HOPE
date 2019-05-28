@@ -42,27 +42,54 @@ By default, the name will be the name of the function, but the first argument se
         ...
 ```
 
+It should also be possible to specify different dependency providers for different interfaces:
+
+```python
+    # Multiple interfaces using one provider
+    @hug.provides("mysql", interfaces=['http', 'websocket'])
+    def mysql_web():
+        ...
+
+
+    # For a provider for a single interface, this short hand can be used
+    @hug.cli.provides("mysql")
+    def mysql_cli():
+        ...
+
+
+    # The following would also be a valid way to apply to multiple interfaces
+    @hug.http.provides("mysql")
+    @hug.cli.provides("mysql")
+    def mysql():
+        ...
+```
+
 ### Using a dependency
 
-Dependencies will be added via a `depends_on(` function, that will be called within function/method defaults:
+Dependencies will be pulled into individual endpoints via a `requires(` function, that will be called within function/method defaults:
 
 ```
-from hug import depends_on
+from hug import requires
 
 @hug.http()
-def hello_world(mysql=depends_on('mysql')):
+def hello_world(mysql=requires('mysql')):
     pass
 ```
 
-Arguments can be passed to the `depends_on` function, these will be passed directly to the `provides` function. Any non-provided arguments will then require the dependency to pull them from the current application action, like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
+Arguments can be passed to the `requires` function, these will be passed directly to the `provides` function.
+Any non-provided arguments will then require the dependency to pull them from the current application action, like for normal hug calls,
+or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
 
-### Where dependencies are stored
+### Where registered dependency providers are stored
 
-Dependencies will be stored within the Hug API module level singleton, within a `dependency_providers` dictionary. If a second `provides` function is defined it will simply take the place of the first - similar to defining a second function with the same name.
+Dependencies providers will be stored within the Hug API module level singleton, within a `dependency_providers` dictionary.
+If a second `provides` function is defined it will simply take the place of the first - similar to defining a second function with the same name.
+If a dependency provider is only meant for a particular set of interfaces, it will be stored on the sub interface API object within the singleton.
 
 ### Overriding a dependency
 
-Overriding a dependency in this system is straight forward: You update the dictionary to point to your new dependency providing function. For instance, in `py.test`'s conftest.py, you could store a series of dependency providers targeting the API you intend to test:
+Overriding a dependency in this system is straight forward: You update the dictionary to point to your new dependency providing function.
+For instance, in `py.test`'s conftest.py, you could store a series of dependency providers targeting the API you intend to test:
 
 ```
    @hug.provides("mysql", api=production_api_im_testing)
@@ -72,7 +99,9 @@ Overriding a dependency in this system is straight forward: You update the dicti
 
 ### Unamed (loose) dependencies
 
-Let's say you reuse a single set of parameters for every endpoint within an API module. Currently, in Hug, the simplest thing to do is redefine these parameters in every function. This is inconsistent with the Do It Right ONCE (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same manner as full dependencies, albeit without the ability to easily swap them out for testing. Here's the proposed API for this feature:
+Let's say you reuse a single set of parameters for every endpoint within an API module. Currently, in Hug, the simplest thing to do is redefine these parameters in every function.
+This is inconsistent with the Do It Right ONCE (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same manner as full dependencies,
+albeit without the ability to easily swap them out for testing. Here's the proposed API for this feature:
 
 ```
 @hug.http()
@@ -86,3 +115,4 @@ def my_second_endpoint(first_two_arguments: Dict=my_first_endpoint, arguement_3)
 ```
 
 This would provide a natural and straight forward way to compose together API endpoints for optimal reuse.
+
