@@ -5,7 +5,7 @@
 | HOPE:       | 257                                         |
 | Title:      | Style Guide for Hug Code                    |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Proposed                                    |
+| Status:     | Accepted                                    |
 | Type:       | Process                                     |
 | Created:    | 23-May-2019                                 |
 | Updated:    | 23-May-2019                                 |
