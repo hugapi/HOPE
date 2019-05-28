@@ -13,18 +13,18 @@
 ## Abstract
 
 This HOPE proposes adding a robust and universally available dependency injection system to Hug.
-This system would be built with the intention of replacing Hug's current `directive` system, one of the first Python microservice dependency injection systems, solving the short comings identified upon extensive usage:
+This system would be built with the intention of replacing Hug's current `directive` system, one of the first Python microservice dependency injection systems, solving the shortcomings identified upon extensive usage:
 
     - Directives aren't clearly separated from type annotations.
-    - It is impossible to have both a directives and a type requirement for a single parameter.
-    - It isn't easy to swap out directives for full HTTP stack testing (though direct calls make it easy to substitute out).
+    - It is impossible to have both a directive and type hint for a single parameter.
+    - It isn't easy to swap out directives for full HTTP stack testing (through direct calls make it easy to substitute out).
     - Directives aren't nestable.
 
-## Proposed Depency Injection System
+## Proposed Dependency Injection System
 
-This HOPE proposes a new dependency injection systems that aims for clarity and reuse.
+This HOPE proposes a new dependency injection systems with an aim for clarity and reuse.
 
-### Defining a depency
+### Defining a dependency
 
 Defining a dependency will happen via a new hug `provides` decorator:
 
@@ -54,11 +54,11 @@ def hello_world(mysql=depends_on('mysql')):
     pass
 ```
 
-Arguments can be passed to the `depends_on` function, these will be passed directly to the `provides` function. Any non-provided arguments, will then require the dependency to pull them from the current application action, like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub dependencies.
+Arguments can be passed to the `depends_on` function, these will be passed directly to the `provides` function. Any non-provided arguments will then require the dependency to pull them from the current application action, like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
 
 ### Where dependencies are stored
 
-Dependencies will be stored withing the Hug API module level singleton, within a `dependency_providers` dictionary. If a second `provides` function is defined it will simply take the place of the first - simular to defining a second function with the same name.
+Dependencies will be stored within the Hug API module level singleton, within a `dependency_providers` dictionary. If a second `provides` function is defined it will simply take the place of the first - similar to defining a second function with the same name.
 
 ### Overriding a dependency
 
@@ -72,7 +72,7 @@ Overriding a dependency in this system is straight forward: You update the dicti
 
 ### Unamed (loose) dependencies
 
-Let's say you reuse a single set of parameters for every endpoint within an API module. Currently, in Hug, the simplist thing to do is redefine these parameters in every function. This is inconsistent with the Do It Right ONCE (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same mannor as full dependencies, albeit without the ability to easily swap them out for testing. Here's the propsed API for this feature:
+Let's say you reuse a single set of parameters for every endpoint within an API module. Currently, in Hug, the simplest thing to do is redefine these parameters in every function. This is inconsistent with the Do It Right ONCE (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same manner as full dependencies, albeit without the ability to easily swap them out for testing. Here's the proposed API for this feature:
 
 ```
 @hug.http()
