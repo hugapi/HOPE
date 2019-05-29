@@ -130,3 +130,7 @@ This means, at a minimum:
 - Any frameworks, libraries, and data structures that power an interface should be modifiable completely on API startup, before being exposed.
 - Specific endpoints should be able to entirely modify interaction with interface implementations outside of the reusable Python based endpoint definition.
 - Interfaces should provide parameters for custom modifications within their routers.
+
+### All Interface categories Should Have a HOPE
+
+All interfaces categories included with Hug should have their own HOPE that defines exactly how that interface should interact with Hug and native Python API definitions.
