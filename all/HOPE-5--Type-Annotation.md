@@ -21,7 +21,7 @@ Additionally, endpoints decorated with annotations should be done in a way that 
 
 ## Annotations Used for Validation
 
-Annotations defined in Hug endpoints will automatically be applied to validate API calls accross interfaces.
+Annotations defined in Hug endpoints will automatically be applied to validate API calls across interfaces.
 Additionally, when possible, these types will also be used to automatically coerce parameters into the correct type.
 If an error occurs at either of these steps, Human readable errors should be presented to consumers by default.
 
