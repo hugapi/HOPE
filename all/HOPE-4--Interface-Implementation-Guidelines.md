@@ -114,6 +114,17 @@ Should have the following behaviour:
 | `add`               | `2`                                         |
 | `add --number_2 3`  | `4`                                         |
 
+### All Interfaces Should be as Idiomatic as Possible
+
+Interfaces Implementations should aim to map common Python behavior and standards to the standards of the interface being mapped into.
+For instance, in Python it is standard practice to use `_` in variable names, in URLs and CLI tools it is standard practice to use `-`,
+as such these interfaces should map accordingly by default:
+
+`my_hug_parameter` -> `my-hug-parameter`
+
+Any such mappings should, however, be optional and provide interface level flags to turn them on and off.
+This needs to be delicately balanced with the above goal to map to the Python implementation intentions as closely as possible.
+
 ### Full Power of the Interface Implementation Available if Needed
 
 From the [Zen of Hug](https://github.com/hugapi/HOPE/blob/master/all/HOPE-20--The-Zen-of-Hug.md):
