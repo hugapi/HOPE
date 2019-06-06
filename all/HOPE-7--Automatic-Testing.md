@@ -43,3 +43,5 @@ Currently examples take the form of either a single URL or a list of URLS:
     @hug.get(examples=["name=HUG&age=1", "name=Timothy&age=29"])
 ```
 
+These examples are limited in their expressiveness and are only implemented in a single interface (HTTP).
+
