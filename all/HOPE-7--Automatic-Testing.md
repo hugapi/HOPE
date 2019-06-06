@@ -78,6 +78,7 @@ The tests will return an assertion error if the output doesn't match the expecte
 To enable fully deterministic test cases that only use provided examples, a second test function will be added:
 
 ```hug.test.examples(api.add)```
+
 This endpoint will only work on endpoints that have examples defined and will otherwise raise an `InvalidTestCase` exception.
 
 ## Automatic Tests over Entire APIs
