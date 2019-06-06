@@ -44,4 +44,22 @@ Currently examples take the form of either a single URL or a list of URLS:
 ```
 
 These examples are limited in their expressiveness and are only implemented in a single interface (HTTP).
+Additionally, these example's don't provide a mechanisms for specifying what the result of the example is expected to be.
+
+As part of this HOPE, I am proposing to expand Hug's example support, to fully express all endpoint arguments.
+To enable this an `Example` object would be introduced that takes args and kwargs:
+
+```
+    @hug.get(examples=[Example("argument1", "argument2", argument_1=argument_1, ..)]
+```
+
+Finally, expected output can be defined by specifying an what the example's output should be:
+
+```
+    @hug.cli(examples=[Example(1, 1) == 2, Example(2, 2) == 4)
+    def add(number_1: int, number_2: int) -> int:
+        return number_1 + number_2
+```
+
+
 
