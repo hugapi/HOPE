@@ -8,7 +8,7 @@
 | Status:     | Proposed                                    |
 | Type:       | Standards Track                             |
 | Created:    | 3-June-2019                                 |
-| Updated:    | 5-June-2019                                 |
+| Updated:    | 6-June-2019                                 |
 
 ## Abstract
 
@@ -75,11 +75,19 @@ To test any endpoint that fits this criteria, an auto function will be added to 
 
 The tests will return an assertion error if the output doesn't match the expected output, throw any exceptions thrown by running the test, or return True if successful.
 [hypothesis](https://hypothesis.readthedocs.io/en/latest/) will be used to automatically generate test values in addition to any examples that are present if it is installed.
+
+```
+All code should be tested.
+All tests should be meaningful.
+```
+
 To enable fully deterministic test cases that only use provided examples, a second test function will be added:
 
 ```hug.test.examples(api.add)```
 
-This endpoint will only work on endpoints that have examples defined and will otherwise raise an `InvalidTestCase` exception.
+This function will only work on endpoints that have examples defined and will otherwise raise an `InvalidTestCase` exception.
+If an individual example does not specify an output, Hug will use the output type annotation, if this is not specified the lack of an exception alone will signify success.
+
 
 ## Automatic Tests over Entire APIs
 
