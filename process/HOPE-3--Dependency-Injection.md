@@ -68,7 +68,7 @@ It should also be possible to specify different dependency providers for differe
 
 Dependencies will be pulled into individual endpoints via a `requires(` function, that will be called within function/method defaults:
 
-```
+```python
 from hug import requires
 
 @hug.http()
@@ -91,7 +91,7 @@ If a dependency provider is only meant for a particular set of interfaces, it wi
 Overriding a dependency in this system is straight forward: You update the dictionary to point to your new dependency providing function.
 For instance, in `py.test`'s conftest.py, you could store a series of dependency providers targeting the API you intend to test:
 
-```
+```python
    @hug.provides("mysql", api=production_api_im_testing)
    def replace_mysql_with_mock():
        return mock.MagicMock()
@@ -103,7 +103,7 @@ Let's say you reuse a single set of parameters for every endpoint within an API 
 This is inconsistent with the Do It Right ONCE (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same manner as full dependencies,
 albeit without the ability to easily swap them out for testing. Here's the proposed API for this feature:
 
-```
+```python
 @hug.http()
 def my_first_endpoint(argument_1, argument2):
     ...
