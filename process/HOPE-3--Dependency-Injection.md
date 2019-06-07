@@ -88,11 +88,11 @@ If a dependency provider is only meant for a particular set of interfaces, it wi
 
 ### Overriding a dependency
 
-Overriding a dependency in this system is straight forward: You update the dictionary to point to your new dependency providing function.
+Overriding a dependency in this system is straight forward: You update the dictionary to point to your new dependency providing function. You do this by creating a new provides against the existing provides API singleton, with 
 For instance, in `py.test`'s conftest.py, you could store a series of dependency providers targeting the API you intend to test:
 
 ```python
-   @hug.provides("mysql", api=production_api_im_testing)
+   @hug.provides("mysql", api=production_api_im_testing, override=True)
    def replace_mysql_with_mock():
        return mock.MagicMock()
 ```
