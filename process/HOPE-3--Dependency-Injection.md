@@ -83,8 +83,7 @@ or via dependency injection. A key point: Any dependency can have unlimited sub-
 ### Where registered dependency providers are stored
 
 Dependencies providers will be stored within the Hug API module level singleton, within a `dependency_providers` dictionary.
-If a second `provides` function is defined it will simply take the place of the first - similar to defining a second function with the same name.
-If a dependency provider is only meant for a particular set of interfaces, it will be stored on the sub interface API object within the singleton.
+If a second `provides` function is defined by default it will raise an `ExistingDependency` exception. However if that second definition defines `override=True`, it will simply take the place of the first - similar to defining a second function with the same name. If a dependency provider is only meant for a particular set of interfaces, it will be stored on the sub interface API object within the singleton.
 
 ### Overriding a dependency
 
