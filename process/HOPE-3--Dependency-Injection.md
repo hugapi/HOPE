@@ -107,8 +107,27 @@ def hello_world(mysql=requires('mysql')):
 ```
 
 Arguments can be passed to the `requires` function, these will be passed directly to the `provides` function.
-Any non-provided arguments will then require the dependency to pull them from the current application action, like for normal hug calls,
-or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
+This will be done in the same mannor as Python's `funtools.partial` and follow the same function signature.
+Any non-provided arguments will then require the dependency to pull them from the current application action,
+like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
+
+Optionaly, you can also directly require any other normal Python callable:
+
+```python
+import json
+
+from hug import requires
+
+
+def shared_configuration(config_file_location="config_file.json"):
+    with open(config_file_location) as config_file:
+         return json.loads(config_file.read())
+
+
+@hug.http()
+def hello_world(mysql=requires(shared_configuration)):
+    pass
+```
 
 ### Where registered dependency providers are stored
 
