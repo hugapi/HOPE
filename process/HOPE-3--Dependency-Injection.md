@@ -130,6 +130,8 @@ For instance, in `py.test`'s conftest.py, you could store a series of dependency
 
 ### Unamed (loose) dependencies
 
+*The following was rejected because it over-complicated the concept, leading to more new APIs then required.*
+
 Let's say you reuse a single set of parameters for every endpoint within an API module. Currently, in Hug, the simplest thing to do is redefine these parameters in every function.
 This is inconsistent with the Do It Right ONCE (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same manner as full dependencies,
 albeit without the ability to easily swap them out for testing. Here's the proposed API for this feature:
