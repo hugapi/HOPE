@@ -45,7 +45,7 @@ def my_endpoint(hug_timer):
     pass
 
 
-# OR more in the more modern form:
+# OR in the more modern form:
 
 
 @hug.get()
