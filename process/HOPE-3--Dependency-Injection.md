@@ -97,6 +97,8 @@ For instance, in `py.test`'s conftest.py, you could store a series of dependency
        return mock.MagicMock()
 ```
 
+## Rejected Ideas:
+
 ### Unamed (loose) dependencies
 
 Let's say you reuse a single set of parameters for every endpoint within an API module. Currently, in Hug, the simplest thing to do is redefine these parameters in every function.
