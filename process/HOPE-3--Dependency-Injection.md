@@ -37,7 +37,7 @@ These two calls are meant to replace the old `Directive` system:
 @directive(apply_globally: bool = False, api: hug.API = None)
 ```
 
-Which was used in the following mannor:
+Which was used in the following manner:
 
 ```python
 @hug.get()
@@ -81,7 +81,7 @@ It should also be possible to specify different dependency providers for differe
         ...
 
 
-    # For a provider for a single interface, this short hand can be used
+    # For a provider for a single interface, this shorthand can be used
     @hug.cli.provides("mysql")
     def mysql_cli():
         ...
@@ -107,7 +107,7 @@ def hello_world(mysql=requires('mysql')):
 ```
 
 Arguments can be passed to the `requires` function, these will be passed directly to the `provides` function.
-This will be done in the same mannor as Python's `funtools.partial` and follow the same function signature.
+This will be done in the same manner as Python's `funtools.partial` and follow the same function signature.
 Any non-provided arguments will then require the dependency to pull them from the current application action,
 like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
 
@@ -132,7 +132,7 @@ def hello_world(config=requires(shared_configuration)):
 ### Where registered dependency providers are stored
 
 Dependencies providers will be stored within the Hug API module level singleton, within a `dependency_providers` dictionary.
-If a second `provides` function is defined by default it will raise an `ExistingDependency` exception. However if that second definition defines `override=True`, it will simply take the place of the first - similar to defining a second function with the same name. If a dependency provider is only meant for a particular set of interfaces, it will be stored on the sub interface API object within the singleton. Hug will first check the per-interface dict of providers, and only fall through to the global dict if the interface specific one does not have the requested provider.
+If a second `provides` function is defined by default it will raise an `ExistingDependency` exception. However, if that second definition defines `override=True`, it will simply take the place of the first - similar to defining a second function with the same name. If a dependency provider is only meant for a particular set of interfaces, it will be stored on the sub interface API object within the singleton. Hug will first check the per-interface dict of providers, and only fall through to the global dict if the interface specific one does not have the requested provider.
 
 ### Overriding a dependency
 
@@ -167,4 +167,3 @@ def my_second_endpoint(first_two_arguments: Dict=my_first_endpoint, arguement_3)
 ```
 
 This would provide a natural and straight forward way to compose together API endpoints for optimal reuse.
-
