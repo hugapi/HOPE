@@ -125,7 +125,7 @@ def shared_configuration(config_file_location="config_file.json"):
 
 
 @hug.http()
-def hello_world(mysql=requires(shared_configuration)):
+def hello_world(config=requires(shared_configuration)):
     pass
 ```
 
