@@ -23,6 +23,36 @@ This system would be built with the intention of replacing Hug's current `direct
 ## Proposed Dependency Injection System
 
 This HOPE proposes a new dependency injection system with an aim for clarity and reuse.
+The API of the new system would consist of a `provides` decorator for defining available dependencies, and a `requires` function for using them:
+
+```python
+@provides(name: str = None, api: hug.API = None, override: bool = False)
+
+def requires(name_or_function: Union[str, Callable], *args, **kwargs) -> Any
+```
+
+These two calls are meant to replace the old `Directive` system:
+
+```python
+@directive(apply_globally: bool = False, api: hug.API = None)
+```
+
+Which was used in the following mannor:
+
+```python
+@hug.get()
+def my_endpoint(hug_timer):
+    pass
+
+
+# OR more in the more modern form:
+
+
+@hug.get()
+def my_endpoint(timer: hug.directives.timer):
+    pass
+```
+
 
 ### Defining a dependency
 
