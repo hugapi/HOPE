@@ -35,6 +35,8 @@ These two calls are meant to replace the old `Directive` system:
 
 ```python
 @directive(apply_globally: bool = False, api: hug.API = None)
+#def timer(...):
+#   pass
 ```
 
 Which was used in the following manner:
