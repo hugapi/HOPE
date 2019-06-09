@@ -26,9 +26,9 @@ This HOPE proposes a new dependency injection system with an aim for clarity and
 The API of the new system would consist of a `provides` decorator for defining available dependencies, and a `requires` function for using them:
 
 ```python
-@provides(name: str = None, api: hug.API = None, override: bool = False)
+@provides(name: str = None, *, api: hug.API = None, override: bool = False)
 
-def requires(name_or_function: Union[str, Callable], *args, **kwargs) -> Any
+requires(name_or_function: Union[str, Callable], *args, **kwargs) -> Any
 ```
 
 These two calls are meant to replace the old `Directive` system:
