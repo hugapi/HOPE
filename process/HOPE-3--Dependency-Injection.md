@@ -137,7 +137,7 @@ If a second `provides` function is defined by default it will raise an `Existing
 ### Overriding a dependency
 
 Overriding a dependency in this system is straight forward: You update the dictionary to point to your new dependency providing function. You do this by creating a new provides against the existing provides API singleton, with the `override` parameter set to `True`.
-For instance, in `py.test`'s conftest.py, you could store a series of dependency providers targeting the API you intend to test:
+For instance, in `py.test`'s [conftest.py](https://docs.pytest.org/en/2.7.3/plugins.html?highlight=re#conftest-py-local-per-directory-plugins), you could store a series of dependency providers targeting the API you intend to test:
 
 ```python
    @hug.provides("mysql", api=production_api_im_testing, override=True)
