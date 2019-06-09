@@ -62,7 +62,7 @@ Defining a dependency will happen via a new hug `provides` decorator:
 
 ```python
     @hug.provides()
-    def mysql_connection(request, config):
+    def mysql_connection(host, port, ...):
         ...
 ```
 
@@ -70,7 +70,7 @@ By default, the name will be the name of the function, but the first argument se
 
 ```python
     @hug.provides("mysql")
-    def mysql_connection(request, config):
+    def mysql_connection(host, port, ...):
         ...
 ```
 
