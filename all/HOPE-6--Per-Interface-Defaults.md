@@ -42,7 +42,14 @@ def log_message(message, user):
 ```
 
 In the above example, this would mean that when calling from the CLI, no user would be required, but it would be necessary when making an HTTP API call.
-Finally, this HOPE proposes utilizing unused **kwargs in the interface decorators as automatic defaults.
+
+## Rejected Proposals 
+
+### Using *kargs and **kwargs for defaults
+
+*This section of the HOPE was rejected as it was determined that this could lead to naming conflicts as more parameters are added to the routers. This is a large cost for the minimal benefit of not needing to explicitly specify defaults.*
+
+This HOPE proposes utilizing unused **kwargs in the interface decorators as automatic defaults.
 This would simplify the above to:
 
 ```python
