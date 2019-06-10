@@ -5,7 +5,7 @@
 | HOPE:       | 3                                           |
 | Title:      | Dependency Injection                        |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Proposed                                    |
+| Status:     | Provisional                                 |
 | Type:       | Standard Track                              |
 | Created:    | 25-May-2019                                 |
 | Updated:    | 27-May-2019                                 |
