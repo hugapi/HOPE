@@ -40,13 +40,18 @@ This HOPE contains the index of all Hug Official Proposals for Enhancement, know
 
 ## HOPE Status Key
 
-- *A* - Accepted (Standards Track only) or Active proposal
+- *A* - Accepted (Standards Track only) or Active proposal. 
+
+    Note: Accepted but not Active for a Standards Track proposal means it's not yet been implemented.
+    
 - *D* - Deferred proposal
 - *F* - Final proposal
 - *P* - Provisional proposal
 - *R* - Rejected proposal
 - *S* - Superseded proposal
 - *W* - Withdrawn proposal
+
+A Hope only exists in this index once it has been through initial review. After an initial review, it receives the appropriate state and entry into the index. Before this, the proposal exists only in a pull request, in a separate "Draft" state.
 
 ## Authors/Owners
 
