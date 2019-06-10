@@ -71,13 +71,16 @@ Following a community discussion, the standard HOPE workflow is:
         - First-pass reviewers are generally quite lenient about this initial review, expecting that problems will be corrected by the reviewing process. Note: Approval of the HOPE is no guarantee that there are no embarrassing mistakes! Correctness is the responsibility of the authors and reviewers.
 
         If the HOPE isn't ready for approval, an editor will send it back to the author for revision, with specific instructions.
-        Once approved, your HOPE will be assigned a unique number.
+        Once approved, your HOPE will be assigned a unique number, added to the index, and given an appropriate status, generally opening it up for further review.
 
 ## HOPE review process
 - Once the initial editing review process is complete, and a core-dev approves it for review (note that this is not the same as accepting your HOPE!), they will remove the [DRAFT] tag and open the HOPE up for broader review.
 - As updates are necessary, the HOPE author can check in new versions to their branch
 - HOPEs will be left as open Pull Requests until either 2 core-devs have approved the HOPE, without any no votes, or a majority of core-devs have approved it.
 - If a HOPE is accepted it will be merged in and placed in the `accepted` directory, otherwise, it will be merged in and placed in the rejected directory.
+
+## Proposing changes to a HOPE
+HOPEs are living documents and can be updated. To propose a change to an existing HOPE a pull request should be made with the changes in place. These changes follow the same approval guidelines as the creation of new HOPEs. In general, changes should only be made for minor differences, grammar or code example fixes, or other changes that align to the original intention of the HOPE. Anything beyond these types of changes should receive its own new HOPE.
 
 **IMPORTANT NOTE:** Until sufficient structure is in place, I Timothy Crosley, as the Benevolent Dictator For Now (BDFN), can accept and put in place any HOPEs unanimously. I am doing this only to bootstrap the process.
 
