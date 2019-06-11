@@ -108,12 +108,12 @@ def hello_world(mysql=requires('mysql')):
     pass
 ```
 
-Arguments can be passed to the `requires` function, these will be passed directly to the `provides` function.
+Arguments that are passed to the `requires` function will be passed directly to the `provides` function.
 This will be done in the same manner as Python's `funtools.partial` and follow the same function signature.
 Any non-provided arguments will then require the dependency to pull them from the current application action,
 like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
 
-Optionaly, you can also directly require any other normal Python callable:
+Optionally, you can also directly require any other normal Python callable:
 
 ```python
 import json
@@ -149,12 +149,12 @@ For instance, in `py.test`'s [conftest.py](https://docs.pytest.org/en/2.7.3/plug
 
 ## Rejected Ideas:
 
-### Unamed (loose) dependencies
+### Unnamed (loose) dependencies
 
 *The following was rejected because it over-complicated the concept, leading to more new APIs then required.*
 
 Let's say you reuse a single set of parameters for every endpoint within an API module. Currently, in Hug, the simplest thing to do is redefine these parameters in every function.
-This is inconsistent with the Do It Right ONCE (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same manner as full dependencies,
+This is inconsistent with the Don't Repeat Yourself (DRY) principle. In this HOPE we are proposing to allow automatic nesting of any hug decorated endpoint in the same manner as full dependencies,
 albeit without the ability to easily swap them out for testing. Here's the proposed API for this feature:
 
 ```python
