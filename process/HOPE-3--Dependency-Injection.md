@@ -139,7 +139,7 @@ def hello_world(config=requires(shared_configuration)):
     pass
 ```
 
-If a named dependency is passed to requires in this fashion, it will through an `InvalidNamedDependencyUsage` exception.
+If a named dependency is passed to requires in this fashion, it will raise an `InvalidNamedDependencyUsage` exception.
 
 ### Where registered dependency providers are stored
 
