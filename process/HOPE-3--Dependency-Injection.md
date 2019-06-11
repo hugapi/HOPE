@@ -26,7 +26,7 @@ This HOPE proposes a new dependency injection system with an aim for clarity and
 The API of the new system would consist of a `provides` decorator for defining available dependencies, and a `requires` function for using them:
 
 ```python
-@provides(name: str = None, *, api: hug.API = None, override: bool = False)
+@provides(name: Union[FunctionName, bool, str] = FunctionName, *, api: hug.API = None, override: bool = False)
 
 requires(name_or_function: Union[str, Callable], *args, **kwargs) -> Any
 ```
@@ -96,6 +96,14 @@ It should also be possible to specify different dependency providers for differe
         ...
 ```
 
+If you only want to enable provider usage locally, and don't want to allow it to be overridden, you can explicitly set it to stay unnamed:
+
+```python
+    @hug.provides(name=False)
+    def mysql_connection(host, port, ...):
+        ...
+```
+
 ### Using a dependency
 
 Dependencies will be pulled into individual endpoints via a `requires(` function, that will be called within function/method defaults:
@@ -113,14 +121,14 @@ This will be done in the same manner as Python's `funtools.partial` and follow t
 Any non-provided arguments will then require the dependency to pull them from the current application action,
 like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
 
-Optionally, you can also directly require any other normal Python callable:
+For unnamed dependencies, the function itself should be passed into the requires function:
 
 ```python
 import json
 
 from hug import requires
 
-
+@hug.provides(name=False):
 def shared_configuration(config_file_location="config_file.json"):
     with open(config_file_location) as config_file:
          return json.loads(config_file.read())
@@ -130,6 +138,8 @@ def shared_configuration(config_file_location="config_file.json"):
 def hello_world(config=requires(shared_configuration)):
     pass
 ```
+
+If a named dependency is passed to requires in this fashion, it will through an `InvalidNamedDependencyUsage` exception.
 
 ### Where registered dependency providers are stored
 
