@@ -1,0 +1,1 @@
+../all/HOPE-7--Automatic-Testing.md
