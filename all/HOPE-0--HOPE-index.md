@@ -23,7 +23,7 @@ This HOPE contains the index of all Hug Official Proposals for Enhancement, know
 |P |[1](https://github.com/hugapi/HOPE/blob/master/all/HOPE-1--HOPE-Purpose-and-Guidelines.md)            | HOPE Purpose and Guidelines         | Timothy Crosley                      |
 |P |[8](https://github.com/hugapi/HOPE/blob/master/all/HOPE-8--Style-Guide-for-Hug-Code.md)               | Style Guide for Hug Code            | Timothy Crosley                      |
 |I |[20](https://github.com/hugapi/HOPE/blob/master/all/HOPE-20--The-Zen-of-Hug.md)                       | The Zen of Hug                      | Timothy Crosley                      |
-|I |[257](https://github.com/hugapi/HOPE/blob/master/all/HOPE-257--Documentation-Guide-for-Hug-Code.md)   | Documentation Guide for Hug Code    | Timothy Crosley                      |
+|I |[257](https://github.com/hugapi/HOPE/blob/master/all/HOPE-257-Documentation-Guide-for-Hug-Code.md)    | Documentation Guide for Hug Code    | Timothy Crosley                      |
 |I |[4](https://github.com/hugapi/HOPE/blob/master/all/HOPE-4--Interface-Implementation-Guidelines.md)    | Interface Implementation Guidelines | Timothy Crosley                      |
 
 ### Standards Track HOPEs (Primarily HOPEs meant to propose changes to the framework)
