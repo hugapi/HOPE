@@ -5,7 +5,7 @@
 | HOPE:       | 4                                           |
 | Title:      | Interface Implementation Guidelines         |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Proposed                                    |
+| Status:     | Provisional                                 |
 | Type:       | Informational                               |
 | Created:    | 28-May-2019                                 |
 | Updated:    | 29-May-2019                                 |

@@ -5,7 +5,7 @@
 | HOPE:       | 6                                           |
 | Title:      | Per Interface Defaults                      |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Proposed                                    |
+| Status:     | Provisional                                 |
 | Type:       | Standards Track                             |
 | Created:    | 1-June-2019                                 |
 | Updated:    | 1-June-2019                                 |
@@ -43,7 +43,7 @@ def log_message(message, user):
 
 In the above example, this would mean that when calling from the CLI, no user would be required, but it would be necessary when making an HTTP API call.
 
-## Rejected Proposals 
+## Rejected Proposals
 
 ### Using *kargs and **kwargs for defaults
 

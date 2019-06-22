@@ -5,7 +5,7 @@
 | HOPE:       | 7                                           |
 | Title:      | Automatic Testing                           |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Proposed                                    |
+| Status:     | Provisional                                 |
 | Type:       | Standards Track                             |
 | Created:    | 3-June-2019                                 |
 | Updated:    | 6-June-2019                                 |

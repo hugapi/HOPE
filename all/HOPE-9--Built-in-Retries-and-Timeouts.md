@@ -5,7 +5,7 @@
 | HOPE:       | 9                                           |
 | Title:      | Built-in Retries and Timeouts               |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | Proposed                                    |
+| Status:     | Provisional                                 |
 | Type:       | Standards Track                             |
 | Created:    | 5-June-2019                                 |
 | Updated:    | 5-June-2019                                 |

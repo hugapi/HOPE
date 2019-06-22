@@ -5,7 +5,7 @@
 | HOPE:       | 10                                          |
 | Title:      | Prefixes and Suffixes                       |
 | Author(s):  | Timothy Crosley <timothy.crosley@gmail.com> |
-| Status:     | DRAFT                                       |
+| Status:     | Provisional                                 |
 | Type:       | Standards Track                             |
 | Created:    | 11-June-2019                                |
 | Updated:    | 11-June-2019                                |
