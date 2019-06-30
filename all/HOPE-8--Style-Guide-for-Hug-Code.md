@@ -50,7 +50,6 @@ All code submitted to hug should run through the following tools:
 
 - Black and isort verification.
 - Flake8
-   - flake8-docstrings
    - flake8-bugbear
 - Bandit
 - pep8-naming
