@@ -23,12 +23,12 @@ This system would be built with the intention of replacing Hug's current `direct
 ## Proposed Dependency Injection System
 
 This HOPE proposes a new dependency injection system with an aim for clarity and reuse.
-The API of the new system would consist of a `provide` decorator for defining available dependencies, and a `requires` function for using them:
+The API of the new system would consist of a `provide` decorator for defining available dependencies, and a `require` function for using them:
 
 ```python
 @provide(name: Union[FunctionName, bool, str] = FunctionName, *, api: hug.API = None, override: bool = False)
 
-requires(name_or_function: Union[str, Callable], *args, **kwargs) -> Any
+require(name_or_function: Union[str, Callable], *args, **kwargs) -> Any
 ```
 
 These two calls are meant to replace the old `Directive` system:
@@ -123,12 +123,12 @@ def hello_world(mysql):
     pass
 ```
 
-Arguments that are passed to the `requires` function will be passed directly to the `provide` function.
+Arguments that are passed to the `require` function will be passed directly to the `provide` function.
 This will be done in the same manner as Python's `funtools.partial` and follow the same function signature.
 Any non-provided arguments will then require the dependency to pull them from the current application action,
 like for normal hug calls, or via dependency injection. A key point: Any dependency can have unlimited sub-dependencies.
 
-For unnamed dependencies, the function itself should be passed into the requires function:
+For unnamed dependencies, the function itself should be passed into the require function:
 
 ```python
 import json
@@ -146,7 +146,7 @@ def hello_world(shared_configuration):
     pass
 ```
 
-If a named dependency is passed to requires in this fashion, it will raise an `InvalidNamedDependencyUsage` exception.
+If a named dependency is passed to require in this fashion, it will raise an `InvalidNamedDependencyUsage` exception.
 
 ### Where registered dependency providers are stored
 
