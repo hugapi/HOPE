@@ -18,14 +18,16 @@ This HOPE details the addition of per-interface default parameter support to Hug
 
 ## Implementation
 
-Each interface decorator would add a new, optional, defaults argument. This argument would take a dictionary of
-parameter names and their intended defaults per the interface.
+Each interface decorator would allow addition of arbitrary kwargs to pass as defaults to the api function, should
+the api function return None.
+
+JMT TODO: Is the description above accurate? Or maybe None is allowed, but interface defaults always take precedence over functional defaults.
 
 Looking somewhat like this:
 
 
 ```python
-@hug.http(defaults={'user': 'system'})
+@hug.http(user="system")
 @hug.cli()
 def log_message(message, user=getpass.getuser()):
     ...
@@ -36,7 +38,7 @@ The defaults would also be able to be applied to parameters whose endpoints have
 
 ```python
 @hug.http()
-@hug.cli(defaults={'user': getpass.getuser()})
+@hug.cli(user=getpass.getuser())
 def log_message(message, user):
     ...
 ```
