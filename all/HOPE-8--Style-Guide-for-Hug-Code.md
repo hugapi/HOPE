@@ -34,9 +34,9 @@ Naming things is hard. Hug has a few strict guidelines on the usage of variable 
     - Except for `id`. Guido himself thought that shouldn't have been moved to the system module. It's too commonly used, and alternatives feel very artificial.
 - Avoid Acronyms, Abbreviations, or any other short forms - unless they are almost universally understand.
 
-## Adding new modules to hug
+## Adding new modules
 
-New modules added to the Hug project should all live directly within the `hug/` directory without nesting. If the modules are meant only for internal use within Hug, they should be prefixed with a leading underscore. For example, def _internal_function. Modules should contain a docstring at the top that gives a general explanation of the purpose and then restates the project's use of the MIT license.
+New modules added to the a project that follows the HOPE-8 standard should all live directly within the base `PROJECT_NAME/` directory without nesting. If the modules are meant only for internal use within the project, they should be prefixed with a leading underscore. For example, def _internal_function. Modules should contain a docstring at the top that gives a general explanation of the purpose and then restates the project's use of the MIT license.
 There should be a `tests/test_$MODULE_NAME.py` file created to correspond to every new module that contains test coverage for the module. Ideally, tests should be 1:1 (one test object per code object, one test method per code method) to the extent cleanly possible.
 
 ## Automated Code Cleaners
